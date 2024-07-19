@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RemoteConfig</string>
     <string name="secure_config">Secure: %s</string>
+    <string name="message_config">Message: %s</string>
 </resources>

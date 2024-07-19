@@ -25,9 +25,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showConfig() {
-        val isSecure = isSecureEnable()
-        tvMessage.text = getString(R.string.secure_config, isSecure)
+        tvMessage.text = getString(R.string.message_config, getMessage())
     }
+
+    private fun getMessage(): String = FirebaseRemoteConfig.getInstance().getString("message")
 
     private fun isSecureEnable(): Boolean = FirebaseRemoteConfig.getInstance().getBoolean("flag_secure")
 }
