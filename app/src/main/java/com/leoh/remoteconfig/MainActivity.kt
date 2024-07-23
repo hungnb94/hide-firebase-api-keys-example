@@ -1,12 +1,17 @@
 package com.leoh.remoteconfig
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
+import com.google.firebase.crashlytics.crashlytics
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var tvMessage: TextView
@@ -21,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         tvMessage = findViewById(R.id.tvMessage)
+        tvMessage.setOnClickListener {
+//            Firebase.analytics.logEvent("My_Custom_Event", bundle)
+            Firebase.crashlytics.recordException(RuntimeException("Test for manual init firebase"))
+            Log.w(TAG, "Log event to firebase analytics")
+        }
         showConfig()
     }
 
