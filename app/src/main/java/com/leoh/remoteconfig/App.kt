@@ -40,6 +40,7 @@ class App : Application() {
             .Builder()
             .setApiKey("AIzaSyBhH6gE7wb_rAGW8iv49OyeRBJreQEwIs0")
             .setApplicationId("1:185353233953:android:27852780e95accdcca2560")
+            .setDatabaseUrl("https://cleanarchitecture-49552.firebaseio.com")
             .setGcmSenderId("185353233953")
             .setStorageBucket("cleanarchitecture-49552.appspot.com")
             .setProjectId("cleanarchitecture-49552")

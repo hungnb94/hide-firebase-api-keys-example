@@ -13,6 +13,8 @@
     <!--    <string name="google_storage_bucket" translatable="false">cleanarchitecture-49552.appspot.com</string>-->
     <!--    project_id-->
     <!--    <string name="project_id" translatable="false">cleanarchitecture-49552</string>-->
+    <!--    firebase_url = https://${project_id}.firebaseio.com-->
+    <!--    <string name="firebase_database_url" translatable="false">https://cleanarchitecture-49552.firebaseio.com</string>-->
 
     <!--    Unused now-->
     <!--    api_key / current_key-->
