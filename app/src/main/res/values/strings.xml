@@ -2,23 +2,5 @@
     <string name="app_name">RemoteConfig</string>
     <string name="secure_config">Secure: %s</string>
     <string name="message_config">Message: %s</string>
-    <!--    Init firebase app-->
-    <!--    api_key / current_key-->
-    <!--    <string name="google_api_key" translatable="false">AIzaSyBhH6gE7wb_rAGW8iv49OyeRBJreQEwIs0</string>-->
-    <!--    mobilesdk_app_id-->
     <string name="google_app_id" translatable="false">1:185353233953:android:27852780e95accdcca2560</string>
-    <!--    project_number-->
-    <!--    <string name="gcm_defaultSenderId" translatable="false">185353233953</string>-->
-    <!--    storage_bucket-->
-    <!--    <string name="google_storage_bucket" translatable="false">cleanarchitecture-49552.appspot.com</string>-->
-    <!--    project_id-->
-    <!--    <string name="project_id" translatable="false">cleanarchitecture-49552</string>-->
-    <!--    firebase_url = https://${project_id}.firebaseio.com-->
-    <!--    <string name="firebase_database_url" translatable="false">https://cleanarchitecture-49552.firebaseio.com</string>-->
-
-    <!--    Unused now-->
-    <!--    api_key / current_key-->
-    <!--    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhH6gE7wb_rAGW8iv49OyeRBJreQEwIs0</string>-->
-    <!--    oauth_client / client_id-->
-    <!--    <string name="default_web_client_id" translatable="false">185353233953-p4pc9dt5odu9dluepnulv8vpq946q09m.apps.googleusercontent.com</string>-->
 </resources>
