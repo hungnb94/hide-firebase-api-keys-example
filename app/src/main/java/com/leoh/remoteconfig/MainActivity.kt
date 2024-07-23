@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         tvMessage.text = getString(R.string.message_config, getMessage())
     }
 
-    private fun getMessage(): String = FirebaseRemoteConfig.getInstance().getString("message")
+//    private fun getMessage(): String = FirebaseRemoteConfig.getInstance().getString("message")
+    private fun getMessage(): String = FirebaseRemoteConfig.getInstance(getApp().firebaseApp).getString("message")
+
+    private fun getApp() = application as App
 
     private fun isSecureEnable(): Boolean = FirebaseRemoteConfig.getInstance().getBoolean("flag_secure")
 }
