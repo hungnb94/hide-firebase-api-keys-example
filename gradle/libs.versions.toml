@@ -3,6 +3,7 @@ agp = "8.5.1"
 firebaseBom = "33.1.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
+firebaseCrashlytics = "3.0.2"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -27,5 +28,6 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 

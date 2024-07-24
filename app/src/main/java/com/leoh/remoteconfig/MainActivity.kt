@@ -11,6 +11,9 @@ import com.google.firebase.Firebase
 import com.google.firebase.analytics.analytics
 import com.google.firebase.crashlytics.crashlytics
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 private const val TAG = "MainActivity"
 
@@ -29,7 +32,12 @@ class MainActivity : AppCompatActivity() {
         tvMessage = findViewById(R.id.tvMessage)
         tvMessage.setOnClickListener {
             Firebase.crashlytics.recordException(IllegalArgumentException("Test combo with analytics"))
-            Firebase.analytics.logEvent("My_Custom_Event", null)
+            Firebase.analytics.logEvent(
+                "click_button",
+                Bundle().apply {
+                    putString("time", SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss XXX", Locale.US).format(Date()))
+                },
+            )
             Log.w(TAG, "Log event to firebase analytics")
         }
         showConfig()
