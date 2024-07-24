@@ -10,7 +10,7 @@ import com.google.firebase.remoteconfig.remoteConfigSettings
 private const val TAG = "MyApp"
 
 class App : Application() {
-    lateinit var firebaseApp: FirebaseApp
+    private lateinit var firebaseApp: FirebaseApp
 
     override fun onCreate() {
         super.onCreate()
@@ -23,7 +23,7 @@ class App : Application() {
                 this,
                 firebaseOptions(),
             )
-        val remoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance(firebaseApp)
+        val remoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
 
         val configSettings =
             remoteConfigSettings {

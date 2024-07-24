@@ -30,12 +30,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         tvMessage = findViewById(R.id.tvMessage)
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss XXX", Locale.US)
         tvMessage.setOnClickListener {
-            Firebase.crashlytics.recordException(IllegalArgumentException("Test combo with analytics"))
+            val time = dateFormat.format(Date())
+            Firebase.crashlytics.recordException(Exception("Test crash at $time"))
             Firebase.analytics.logEvent(
                 "click_button",
                 Bundle().apply {
-                    putString("time", SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss XXX", Locale.US).format(Date()))
+                    putString("time", time)
                 },
             )
             Log.w(TAG, "Log event to firebase analytics")
@@ -47,10 +49,7 @@ class MainActivity : AppCompatActivity() {
         tvMessage.text = getString(R.string.message_config, getMessage())
     }
 
-//    private fun getMessage(): String = FirebaseRemoteConfig.getInstance().getString("message")
-    private fun getMessage(): String = FirebaseRemoteConfig.getInstance(getApp().firebaseApp).getString("message")
+    private fun getMessage(): String = FirebaseRemoteConfig.getInstance().getString("message")
 
     private fun getApp() = application as App
-
-    private fun isSecureEnable(): Boolean = FirebaseRemoteConfig.getInstance().getBoolean("flag_secure")
 }
