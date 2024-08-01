@@ -6,6 +6,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.remoteConfigSettings
+import com.leoh.credentials.CredentialProvider
 
 private const val TAG = "MyApp"
 
@@ -35,14 +36,16 @@ class App : Application() {
         }
     }
 
-    private fun firebaseOptions(): FirebaseOptions =
-        FirebaseOptions
+    private fun firebaseOptions(): FirebaseOptions {
+        val credentialProvider = CredentialProvider()
+        return FirebaseOptions
             .Builder()
-            .setApiKey("AIzaSyBhH6gE7wb_rAGW8iv49OyeRBJreQEwIs0")
-            .setApplicationId("1:185353233953:android:27852780e95accdcca2560")
-            .setDatabaseUrl("https://cleanarchitecture-49552.firebaseio.com")
-            .setGcmSenderId("185353233953")
-            .setStorageBucket("cleanarchitecture-49552.appspot.com")
-            .setProjectId("cleanarchitecture-49552")
+            .setApiKey(credentialProvider.getApiKey())
+            .setApplicationId(credentialProvider.getApplicationId())
+            .setDatabaseUrl(credentialProvider.getDatabaseUrl())
+            .setGcmSenderId(credentialProvider.getGcmSenderId())
+            .setStorageBucket(credentialProvider.getStorageBucket())
+            .setProjectId(credentialProvider.getProjectId())
             .build()
+    }
 }
