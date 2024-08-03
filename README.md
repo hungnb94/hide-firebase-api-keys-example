@@ -120,7 +120,9 @@ FirebaseApp.initializeApp(this, builder.build());
 
 
 ### Step 9: Secure Firebase API keys
-- You can put Firebase API keys in server or whatever you want. In this example, I will put it under .so file
+- You can put Firebase API keys in server or whatever you want. In this example, I will put it in jniLibs (file .so)
+![image](./images/jni_libs.png)
+
 
 
 ## Troubleshooting
