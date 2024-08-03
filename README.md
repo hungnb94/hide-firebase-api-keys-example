@@ -76,7 +76,7 @@ plugins {
     <string name="google_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>
     <string name="project_id" translatable="false">mydemoapp</string>
-<string name="google_storage_bucket" translatable="false">mydemoapp.appspot.com</string>
+    <string name="google_storage_bucket" translatable="false">mydemoapp.appspot.com</string>
 </resources>
 ```
 - You can create this file by yourself follow this guide: https://developers.google.com/android/guides/google-services-plugin
