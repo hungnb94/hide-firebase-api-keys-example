@@ -3,4 +3,5 @@
     <string name="secure_config">Secure: %s</string>
     <string name="message_config">Message: %s</string>
     <string name="google_app_id" translatable="false">1:185353233953:android:27852780e95accdcca2560</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id">none</string>
 </resources>
