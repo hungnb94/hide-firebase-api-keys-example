@@ -17,12 +17,10 @@
 - build.gradle (project-level)
 ```Add rules to include the Google Services Gradle plugin:
 classpath 'com.google.gms:google-services:4.4.2'
-classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.2'
 ```
 - app/build.gradle
 ```Apply the Google Services Gradle plugin:
 apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
 ```
 ```Add the library dependency:
 // Import the BoM for the Firebase platform
