@@ -130,6 +130,13 @@ FirebaseApp.initializeApp(this, builder.build());
 ```strings.xml
 <string name="google_app_id" translatable="false">1:1035469437089:android:73a4fb8297b2cd4f</string>
 ```
+- If you using firebase crashlytics & `isMinifyEnabled = true`, add com.google.firebase.crashlytics.mapping_file_id or com.crashlytics.android.build_id to strings.xml
+```strings.xml
+<string name="com.google.firebase.crashlytics.mapping_file_id">none</string>
+```
+```strings.xml
+<string name="com.crashlytics.android.build_id">1</string>
+```
 
 
 
@@ -138,3 +145,5 @@ FirebaseApp.initializeApp(this, builder.build());
 - https://firebase.blog/posts/2016/12/working-with-multiple-firebase-projects-in-an-android-app
 - https://developers.google.com/android/guides/google-services-plugin
 - https://stackoverflow.com/questions/42926624/i-am-using-multiple-firebase-projects-in-an-android-app-i-am-getting-this-error/62155919#62155919
+- https://stackoverflow.com/questions/58010359/unmetdependencyexception-the-crashlytics-build-id-is-missing/75185611#75185611
+- https://stackoverflow.com/questions/76218345/how-to-deal-with-the-crashlytics-build-id-is-missing/78531210#78531210
